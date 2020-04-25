@@ -1,0 +1,7 @@
+// app actions
+
+
+// pone actions
+export const FETCH_PHONES_START = 'PHONE/FETCH_PHONES_START';
+export const FETCH_PHONES_SUCCESS = 'PHONE/FETCH_PHONES_SUCCESS';
+export const FETCH_PHONES_FAILED = 'PHONE/FETCH_PHONES_FAILED';
