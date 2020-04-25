@@ -5,7 +5,7 @@ import './Layout.scss';
 const Layout = () => {
     return (
         <div>
-            <h2>Welcome to React App!!!</h2>
+            <h2>Welcome</h2>
         </div>
     );
 };
