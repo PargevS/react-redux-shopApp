@@ -1,12 +1,15 @@
 import React from 'react';
-// *************************
+import {BrowserRouter as Router} from 'react-router-dom';
+// *******************************
 import './Layout.scss';
+import routes from "../../routes";
 
 const Layout = () => {
+
     return (
-        <div>
-            <h2>Welcome</h2>
-        </div>
+        <Router>
+            {routes()}
+        </Router>
     );
 };
 
