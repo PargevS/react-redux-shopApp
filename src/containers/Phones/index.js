@@ -1,11 +1,3 @@
-import React from 'react';
-
-const Phones = () => {
-    return (
-        <div>
-            All Phones
-        </div>
-    );
-};
+import Phones from "./Phones";
 
 export default Phones;
