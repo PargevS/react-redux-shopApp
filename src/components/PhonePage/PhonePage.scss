@@ -1,0 +1,115 @@
+.phone-page{
+
+  .content{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    .thumbnail{
+      max-width: calc(50% - 20px);
+      min-width: 310px;
+      margin: 0 10px;
+      text-align: center;
+
+      img{
+        min-width: 150px;
+        max-width: 100%;
+        min-height: 150px;
+        max-height: 80vh;
+        margin: 15px auto;
+      }
+    }
+
+    .description{
+      max-width: calc(50% - 20px);
+      min-width: 310px;
+      padding: 15px 0;
+      margin: 0 10px;
+
+      .header{
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+        border-bottom: 2.5px solid #3b225e;
+
+        h1{
+          text-align: center;
+          font-weight: 500;
+          margin: 10px 0 35px 0;
+        }
+
+        .price{
+          margin: 20px 0;
+          font-size: 40px;
+          color: blue;
+        }
+
+        .btn-lg{
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .item{
+          .nave, .value{
+            text-align: left;
+            margin: 10px 2.5px;
+            color: #272727;
+            font-size: 19px;
+            font-weight: 500;
+          }
+          .value{
+            color: blue;
+          }
+        }
+      }
+
+      .details-content{
+        border-bottom: 2.5px solid #3b225e;
+        padding-bottom: 20px;
+
+        h3{
+          text-align: left;
+          flex: 20;
+          margin: 10px 0 15px 0;
+          color: #34043b;
+
+          @media (max-width: 767.98px){text-align: center}
+        }
+
+        .detail{
+          width: 95%;
+          margin: 5px auto;
+
+          .name, .value{
+            margin: 0 2.5px;;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 500;
+            color: #727272;
+          }
+          .value{
+            color: #000;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      width: 90%;
+    }
+
+    @media (max-width: 767.98px) {
+      width: 100%;
+      .thumbnail, .description{
+        min-width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        text-align: center;
+      }
+    }
+
+  }
+}

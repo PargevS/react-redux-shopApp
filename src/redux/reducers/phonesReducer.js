@@ -1,4 +1,8 @@
-import {FETCH_PHONES_SUCCESS, FETCH_PHONES_FAILED, FETCH_PHONES_START, LOAD_MORE_PHONES_SUCCESS} from "../actionTypes";
+import {
+    FETCH_PHONES_SUCCESS, FETCH_PHONES_FAILED, FETCH_PHONES_START,
+    LOAD_MORE_PHONES_SUCCESS,
+    FETCH_PHONE_SUCCESS
+} from "../actionTypes";
 import {forEach} from "ramda";
 
 
@@ -14,7 +18,7 @@ const handlers = {
         return {...state, ...morePhones}
     } ,
     [FETCH_PHONES_FAILED]: (state, {payload, error}) =>{
-        return {}
+        return {...state, payload}
     },
     DEFAULT: state => state
 }

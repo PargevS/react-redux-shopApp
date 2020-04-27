@@ -16,3 +16,12 @@ export const loadMorePhonesAPI = async (offset) => {
         return 'Error while receiving data.';
     }
 }
+
+export const fetchPhoneByIdAPI = async (id) => {
+    try{
+        const phone = PHONES.find(phone => phone.id === id);
+        return phone;
+    }catch (e) {
+       return e;
+    }
+}

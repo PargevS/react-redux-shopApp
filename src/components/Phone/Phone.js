@@ -14,7 +14,7 @@ const Phone = ({phone}) => {
 
             <div className="caption">
                 <p className='price'>{phone.price}$</p>
-                <h4><Link to={`/phones/${phone.id}`} >{phone.producer + ' ' + phone.name}</Link></h4>
+                <h4><Link to={`phones/${phone.id}`} >{phone.producer + ' ' + phone.name}</Link></h4>
             </div>
             <div className="caption">
                 <button className='btn'>More Info</button>

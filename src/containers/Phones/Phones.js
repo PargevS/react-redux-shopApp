@@ -4,11 +4,12 @@ import {phoneActions} from "../../redux/actions";
 // **********************************
 import './Phones.scss';
 import Phone from "../../components/Phone";
+import Layout from "../Layout";
 
 const Phones = () => {
     const dispatch = useDispatch();
     const phonesObj = useSelector(state => state.phones);
-    const ids = useSelector(state => state.phonePage.ids);
+    const ids = useSelector(state => state.phonesPage.ids);
     const [phones, setPhones] = useState([]);
 
 
@@ -39,10 +40,10 @@ const Phones = () => {
         return <p>Loading...</p>;
     } else {
         return (
-            <div>
+            <Layout>
                 <div className='phone-list'>
                     {
-                        phones.map(phone => <Phone phone={phone} key={phone.id}/>)
+                        phones.map((phone, idx) => <Phone phone={phone} key={phone.id + idx}/>)
                     }
                 </div>
                 <div className="row more">
@@ -51,7 +52,7 @@ const Phones = () => {
                         className='btn btn-info'>
                         Load More</button>
                 </div>
-            </div>
+            </Layout>
         );
     }
 
