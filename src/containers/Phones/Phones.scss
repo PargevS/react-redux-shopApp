@@ -4,3 +4,13 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.more{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+
+  button{
+    margin-right: 10px;
+  }
+}

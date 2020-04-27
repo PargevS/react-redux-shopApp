@@ -17,8 +17,8 @@ const Phone = ({phone}) => {
                 <h4><Link to={`/phones/${phone.id}`} >{phone.producer + ' ' + phone.name}</Link></h4>
             </div>
             <div className="caption">
-                <button className='btn btn-info'>More Info</button>
-                <button className='btn '>Add To Cart</button>
+                <button className='btn'>More Info</button>
+                <button className='btn btn-info'>Add To Cart</button>
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import {FETCH_PHONES_SUCCESS, FETCH_PHONES_FAILED, FETCH_PHONES_START} from "../actionTypes";
+import {FETCH_PHONES_SUCCESS, FETCH_PHONES_FAILED, FETCH_PHONES_START, LOAD_MORE_PHONES_SUCCESS} from "../actionTypes";
 import {forEach} from "ramda";
 
 
@@ -8,6 +8,11 @@ const handlers = {
         payload.forEach(item => newObj[item.id] = item);
         return {...state, ...newObj}
     },
+    [LOAD_MORE_PHONES_SUCCESS]: (state, {payload}) => {
+        const morePhones = {};
+        payload.forEach(item => morePhones[item.id] = item);
+        return {...state, ...morePhones}
+    } ,
     [FETCH_PHONES_FAILED]: (state, {payload, error}) =>{
         return {}
     },

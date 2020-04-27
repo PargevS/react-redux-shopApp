@@ -12,6 +12,7 @@ const Phones = () => {
     const [phones, setPhones] = useState([]);
 
 
+
     useEffect(() => {
         phoneActions.fetchPhones()(dispatch);
     }, [phoneActions.fetchPhones, dispatch]);
@@ -29,15 +30,27 @@ const Phones = () => {
         return phonesList;
     }
 
+    const loadMorePhones = () => {
+        phoneActions.loadMorePhones()(dispatch);
+    }
+
 
     if (!phones.length) {
         return <p>Loading...</p>;
     } else {
         return (
-            <div className='phone-list'>
-                {
-                    phones.map(phone => <Phone phone={phone} key={phone.id}/>)
-                }
+            <div>
+                <div className='phone-list'>
+                    {
+                        phones.map(phone => <Phone phone={phone} key={phone.id}/>)
+                    }
+                </div>
+                <div className="row more">
+                    <button
+                        onClick={loadMorePhones}
+                        className='btn btn-info'>
+                        Load More</button>
+                </div>
             </div>
         );
     }
