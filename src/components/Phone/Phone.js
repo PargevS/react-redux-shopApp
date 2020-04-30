@@ -3,7 +3,7 @@ import React from 'react';
 import './Phone.scss';
 import {Link} from "react-router-dom";
 
-const Phone = ({phone}) => {
+const Phone = ({phone, addToBasket}) => {
     return (
         <div className='phone-card'>
             <div className="thumb">
@@ -18,7 +18,9 @@ const Phone = ({phone}) => {
             </div>
             <div className="caption">
                 <button className='btn'>More Info</button>
-                <button className='btn btn-info'>Add To Cart</button>
+                <button className='btn btn-info'
+                        onClick={() => addToBasket(phone.id)}
+                >Add To Cart</button>
             </div>
         </div>
     );

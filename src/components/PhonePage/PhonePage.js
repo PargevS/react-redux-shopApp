@@ -1,8 +1,11 @@
 import React from 'react';
 // *************************
 import './PhonePage.scss';
+import ProductDetail from "../ProductDetail";
+import ProductWidgetDetail from "../ProductWidgetDetail";
+import BasketWidget from "../../containers/BasketWidget";
 
-const PhonePage = ({phone}) => {
+const PhonePage = ({phone, addToBasket}) => {
     return (
         <div className='container phone-page'>
             <div className="content">
@@ -13,56 +16,37 @@ const PhonePage = ({phone}) => {
 
                     {/*{/*Phone characteristics header*/}
                     <div className="header">
-                        <h1>{phone.producer + ' ' +phone.name}</h1>
+                        <BasketWidget/>
+                        <h1>{phone.producer + ' ' + phone.name}</h1>
                         <div className="short-desc">
-                            <div className="item">
-                                <span className="name">Producer : </span>
-                                <span className="value">{phone.producer}</span>
-                            </div>
-                            <div className="item">
-                                <span className="name">Available : </span>
-                                <span className="value">Yes</span>
-                            </div>
-                            <div className="item">
-                                <span className="name">Warranty : </span>
-                                <span className="value">1 year</span>
-                            </div>
+
+                            <ProductWidgetDetail name="Producer" characteristic={phone.producer}/>
+                            <ProductWidgetDetail name="Available" characteristic="Yes" />
+                            <ProductWidgetDetail name="Warranty" characteristic="1 year" />
+
                         </div>
                         <h2 className="price">{phone.price}$</h2>
-                        <button className="btn btn-info btn-lg">By Now</button>
+                        <button
+                            onClick={() => addToBasket(phone.id)}
+                            className="btn btn-info btn-lg">
+                            By Now
+                        </button>
                     </div>
                     {/*{/*Phone characteristics header end*/}
 
                     {/*Main characteristics*/}
                     <div className="details-content">
                         <h3>Main characteristics</h3>
-                        <div className="detail">
-                            <span className="name">Display Size : </span>
-                            <span className="value">{phone.displaySize}dm</span>
-                        </div>
-                        <div className="detail">
-                            <span className="name">Memory : </span>
-                            <span className="value">{phone.memory}gb</span>
-                        </div>
-                        <div className="detail">
-                            <span className="name">RAM : </span>
-                            <span className="value">{phone.ram}gb</span>
-                        </div>
-                        <div className="detail">
-                            <span className="name">Camera : </span>
-                            <span className="value">{phone.mainCamera}</span>
-                        </div>
-                        <div className="detail">
-                            <span className="name">Selfie Camera : </span>
-                            <span className="value">{phone.selfieCamera}</span>
-                        </div>
-                        <div className="detail">
-                            <span className="name">Battery : </span>
-                            <span className="value">{phone.battery}</span>
-                        </div>
+
+                        <ProductDetail name="Display Size" characteristic={phone.displaySize} type="dm" />
+                        <ProductDetail name="Memory" characteristic={phone.memory} type="gb" />
+                        <ProductDetail name="RAM" characteristic={phone.ram} type="gb" />
+                        <ProductDetail name="Main Camera" characteristic={phone.mainCamera}  />
+                        <ProductDetail name="Selfie Camera" characteristic={phone.selfieCamera}  />
+                        <ProductDetail name="Battery" characteristic={phone.battery}  />
+
                     </div>
                     {/*Main characteristics end*/}
-
                 </div>
             </div>
         </div>

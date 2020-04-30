@@ -1,3 +1,18 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.main-content {
+  width: calc(75% - 20px);
+}
+
+.sidebar {
+  width: calc(25% - 20px);
+}
+
+// phone list styles
 .phone-list{
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +20,7 @@
   justify-content: space-around;
 }
 
+// more styles
 .more{
   display: flex;
   justify-content: flex-end;

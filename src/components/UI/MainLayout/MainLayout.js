@@ -1,8 +1,9 @@
 import React from 'react';
 // *******************************
-import './Layout.scss';
+import './MainLayout.scss';
+import Sidebar from "../../Sidebar";
 
-const Layout = ({children}) => {
+const MainLayout = ({children}) => {
 
     return (
         <div className='view-wrapper'>
@@ -12,7 +13,7 @@ const Layout = ({children}) => {
                             {children}
                         </main>
                         <aside className='col sidebar'>
-                            Sidebar
+                            <Sidebar/>
                         </aside>
                     </div>
                 </div>
@@ -20,4 +21,4 @@ const Layout = ({children}) => {
     );
 };
 
-export default Layout;
+export default MainLayout;

@@ -1,14 +1,17 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 // *************************
-import {phoneActions} from "../../redux/actions";
-import Layout from "../Layout";
+import {phoneActions, basketActions} from "../../redux/actions";
 import PhonePage from "../../components/PhonePage";
 
 
 const Phone = (props) => {
     const dispatch = useDispatch();
     const phone = useSelector(state => state.phonePage.phone);
+
+    const addPhoneToBasket = (id) => {
+        basketActions.addPhoneToBasket(id)(dispatch);
+    }
 
     useEffect(() => {
         setTimeout(() => {
@@ -17,15 +20,12 @@ const Phone = (props) => {
         }, 100)
     }, []);
 
-    console.log(phone);
 
-    if(!phone.id){
-        return <p>Loading....</p>
-    }else {
-        return <PhonePage phone={phone}/>
+    if (!phone.id) {
+        return (<p>Loading....</p>);
+    } else {
+        return (<PhonePage phone={phone} addToBasket={(id) => addPhoneToBasket(id)}/>);
     }
-
-
 };
 
 export default Phone;

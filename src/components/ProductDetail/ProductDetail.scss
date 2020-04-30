@@ -1,0 +1,19 @@
+.details-content {
+  .detail {
+    width: 95%;
+    margin: 5px auto;
+
+    .name, .value {
+      margin: 0 2.5px;;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 500;
+      color: #727272;
+    }
+
+    .value {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+}
