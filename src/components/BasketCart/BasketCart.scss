@@ -1,25 +1,26 @@
-.basket-card{
-  margin: 10px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.basket-card {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: 10px 5px;
+  text-align: center;
 
-  .card-widget-btn{
-    text-decoration: none!important;
+  .card-widget-btn {
+    display: inline-block;
+    text-decoration: none !important;
     background-color: #0b0f92;
     color: #ffffff;
+    width: 90%;
     border: none;
-    padding-left: 25px;
-    padding-right: 25px;
   }
 
-  h3{
+  h3 {
     margin: 5px 0 12px 0;
     font-size: 22px;
     color: #757575;
   }
 
-  .hyphen{
+  .hyphen {
     margin: 0 5px;
   }
 }

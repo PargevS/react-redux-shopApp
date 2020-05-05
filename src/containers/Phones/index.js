@@ -33,7 +33,11 @@ const Phones = () => {
 
 
     if (!phones.length) {
-        return <p>Loading...</p>;
+        return (
+            <MainLayout>
+                <p>Note phones</p>
+            </MainLayout>
+        );
     } else {
         return (
             <MainLayout>
