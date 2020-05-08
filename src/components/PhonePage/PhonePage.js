@@ -16,7 +16,6 @@ const PhonePage = ({phone, addToBasket}) => {
 
                     {/*{/*Phone characteristics header*/}
                     <div className="header">
-                        <BasketWidget/>
                         <h1>{phone.producer + ' ' + phone.name}</h1>
                         <div className="short-desc">
 

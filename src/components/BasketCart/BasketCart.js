@@ -5,14 +5,14 @@ import './BasketCart.scss';
 
 const BasketCart = ({itemsAmount = 0, totalPrice = 0}) => {
     return (
-        <div className="basket-card">
-            <h3>Basket</h3>
+        <React.Fragment>
             <Link to="/basket"  className="btn card-widget-btn">
+                <i className="fa fa-cart-arrow-down"></i>
                 {itemsAmount} (items)
                 <span className="hyphen">-</span>
                 {totalPrice}$
             </Link>
-        </div>
+        </React.Fragment>
     );
 };
 

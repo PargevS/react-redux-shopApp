@@ -8,7 +8,6 @@ import SearchWidget from "../../containers/SearchWidget";
 const Sidebar = () => {
     return (
         <div>
-            <BasketWidget/>
             <SearchWidget/>
         </div>
     );

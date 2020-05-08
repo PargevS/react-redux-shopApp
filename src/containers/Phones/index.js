@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import Phone from "../../components/Phone";
 import MainLayout from "../../components/UI/MainLayout";
 import {basketActions, phoneActions} from "../../redux/actions";
+import PhoneList from "../../components/PhoneList";
 
 const Phones = () => {
     const dispatch = useDispatch();
@@ -35,20 +36,14 @@ const Phones = () => {
     if (!phones.length) {
         return (
             <MainLayout>
-                <p>Note phones</p>
+                <p style={{paddingTop: 30, paddingLeft: 50}}>Note phones</p>
             </MainLayout>
         );
     } else {
         return (
             <MainLayout>
-                <div className='phone-list'>
-                    {
-                        phones.map((phone, idx) => (<Phone
-                            phone={phone}
-                            key={phone.id + idx}
-                            addToBasket={(id) => addPhoneToBasket(id)}/>))
-                    }
-                </div>
+                <PhoneList phones={phones} addPhoneToBasket={addPhoneToBasket}/>
+
                 <div className="row more">
                     <button
                         onClick={loadMorePhones}

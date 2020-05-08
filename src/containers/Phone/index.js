@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 // *************************
 import {phoneActions, basketActions} from "../../redux/actions";
-import PhonePage from "../../components/PhonePage";
+import PhonePage from './../../components/PhonePage';
 
 
 const Phone = (props) => {

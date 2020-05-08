@@ -1,28 +1,27 @@
-.basket-card {
-  width: 100%;
-  display: block;
-  position: relative;
-  padding: 10px 5px;
-  text-align: center;
 
   .card-widget-btn {
     display: inline-block;
     text-decoration: none !important;
-    background-color: #0b0f92;
-    color: #ffffff;
-    width: 90%;
+    color: #2c9a9e;
+    width: 100%;
     border: none;
-  }
+    text-align: center;
+    padding: 10px 5px;
 
-  h3 {
-    margin: 5px 0 12px 0;
-    font-size: 22px;
-    color: #757575;
+    &:hover{
+      box-shadow: none;
+      color: #14d07f;;
+    }
+
+    i{
+      margin: 0 5px 0 5px;
+    }
+
   }
 
   .hyphen {
     margin: 0 5px;
   }
-}
+
 
 

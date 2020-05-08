@@ -6,8 +6,9 @@ import {createBrowserHistory} from 'history';
 import {BrowserRouter as Router} from 'react-router-dom';
 // ************************************
 import './index.scss';
-import store from "./redux/store";
-import routes from "./routes";
+import Routes from "./routes";
+import store from './redux/store';
+import Header from "./components/Header/Header";
 
 
 const history = createBrowserHistory();
@@ -17,7 +18,8 @@ ReactDOM.render(
         <Provider store={store}>
             <Router>
                 <ConnectedRouter history={history}>
-                    {routes()}
+                    <Header/>
+                    <Routes/>
                 </ConnectedRouter>
             </Router>
         </Provider>

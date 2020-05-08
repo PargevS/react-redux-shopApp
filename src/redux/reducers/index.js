@@ -5,9 +5,12 @@ import phonesReducer from "./phonesReducer";
 import phonesPageReducer from "./phonesPageReducer";
 import phonePageReducer from "./phonePageReducer";
 import basketReducer from "./basketReducer";
+import producersReducer from "./producerReducer";
+
 
 const createRootReducer = history => combineReducers({
     phones: phonesReducer,
+    producers: producersReducer,
     phonesPage: phonesPageReducer,
     phonePage: phonePageReducer,
     basket: basketReducer,

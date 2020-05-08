@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
+  @media (max-width: 768.8px){
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
 }
 
 .main-content {
@@ -12,21 +16,21 @@
   width: calc(25% - 20px);
 }
 
-// phone list styles
-.phone-list{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+.sidebar, .main-content{
+  @media (max-width: 768.8px) {
+    width: calc(100% - 20px);
+  }
 }
+
 
 // more styles
 .more{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 10px 0;
 
   button{
-    margin-right: 10px;
+    background-color: transparent;
+    color: #2c9a9e;
   }
 }
